@@ -9,11 +9,8 @@ if (process.env.DB_USERNAME === "") {
     process.env.DB_DATABASE
   }`;
 } else {
-  mongooseURI = `mongodb://${process.env.DB_USERNAME}:${
-    process.env.DB_PASSWORD
-  }@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
+  mongooseURI = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
 }
-
 mongoose.connect(
   mongooseURI,
   {
